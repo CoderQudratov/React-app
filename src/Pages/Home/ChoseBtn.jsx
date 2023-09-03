@@ -17,7 +17,7 @@ export const ChoseBtns=({url,setUrl})=>{
     },[location.pathname])
     return(
         <div className="card-hero__chose-time">
-        <NavLink exact   id="bugun" className='chose-btn' to="/bugun">bugun</NavLink>
+        <NavLink  id="bugun" className='chose-btn' to="/bugun">bugun</NavLink>
         <NavLink  id="oy" className='chose-btn'  to={`oylik/${"oy"}/${"shahar"}`}>Oylik</NavLink>
         <NavLink  id="yil" className='chose-btn'  to={`oylik/${"oy"}/${"shahars"}`}>Yillik</NavLink>
       </div>

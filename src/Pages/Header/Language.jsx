@@ -5,9 +5,8 @@ export const Language = () => {
       <li className="site-hader__item">
         <NavLink
           className="site-header__lang"
-          activeClassName="active"
+          
           to="uz"
-          exact
         >
           uz
         </NavLink>
@@ -15,7 +14,7 @@ export const Language = () => {
       <li className="site-hader__item">
         <NavLink
           className="site-header__lang"
-          activeClassName="active"
+          
           to="ru"
         >
           ру
@@ -24,7 +23,7 @@ export const Language = () => {
       <li className="site-hader__item">
         <NavLink
           className="site-header__lang"
-          activeClassName="active"
+          
           to="en"
         >
           en
