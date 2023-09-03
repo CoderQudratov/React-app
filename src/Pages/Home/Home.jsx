@@ -16,9 +16,10 @@ export function Home() {
   const {city} =useContext(Context)
   const [namozvaqti,setNamozVaqti]=useState('')
   const {data,loading,error}=HookAPI(url,city)
-  const {datas,setDatas}=useContext(Context)  
+  console.log(data);
+  // const {datas,setDatas}=useContext(Context)  
   // useEffect(()=>{
-   setDatas(data)
+  //  setDatas(data)
  useEffect(()=>{
  if (location.pathname=='/') {
   location.pathname='/bugun'
@@ -33,14 +34,14 @@ export function Home() {
             <div className="site-hero__card card-hero">
               <h1 className="card-hero__title">{data.region} Namoz vaqti</h1>
               <p className="card-hero__time">
-                <time className="time" datetime="2008-12-14 20:00">
+                <time className="time" >
                 {data.date} Safar 1445
                 </time>
               </p>
              <ChoseBtns url={url} setUrl={setUrl}/>
              <Routes>
       
-      <Route path="bugun" index element={<Thisday />}/>
+      <Route path="/bugun" index element={<Thisday data={data}/>}/>
     </Routes>
             
              
@@ -48,7 +49,7 @@ export function Home() {
             
           </div>
           <Routes>
-             <Route path="oylik/oy/shahar" element={<Table datas={datas}/>}/> 
+             <Route path="oylik/oy/shahar" element={<Table data={data}/>}/> 
             </Routes>
         </div>
       </section>

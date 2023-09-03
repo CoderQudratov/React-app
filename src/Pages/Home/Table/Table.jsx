@@ -1,11 +1,12 @@
 import { useContext, useEffect } from "react";
 import { Context } from "../../../Settings";
 import "./table.css";
-export const Table = () => {
+export const Table = ({data}) => {
   //    console.log(name);
   //    console.log(datas);
+  let datas =data
   let arr = [];
-  const { datas, setDatas } = useContext(Context);
+
   //   console.log(datas);
   if (Array.isArray(datas)) {
     arr = [...arr, datas];

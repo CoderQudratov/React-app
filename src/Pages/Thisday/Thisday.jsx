@@ -1,10 +1,9 @@
 import { useContext } from "react";
 import "./bukun.css"
 import { Context } from "../../Settings";
-export function Thisday() {
-    const {datas,setDatas}=useContext(Context)
-    console.log(datas);
-const {times}=datas
+export function Thisday({data}) {
+    
+const {times}=data
 console.log(times);
     return(
         <>
