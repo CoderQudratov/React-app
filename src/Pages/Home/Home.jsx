@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes, useLocation } from "react-router-dom";
 import './Home.css'
 import { useContext, useEffect, useState } from "react";
 import { Context, HookAPI } from "../../Settings";
@@ -6,8 +6,11 @@ import { ChoseBtns } from "./ChoseBtn";
 import { Header } from "../Header";
 import { Thisday } from "../Thisday/Thisday";
 import { Table } from "./Table";
-
+// let location =useLocation()
+// console.log(location);
 export function Home() {
+  const location =useLocation()
+  
   const [url,setUrl] =useState('')
   const [vaqt,setvaqt]=useState('')
   const {city} =useContext(Context)
@@ -16,7 +19,11 @@ export function Home() {
   const {datas,setDatas}=useContext(Context)  
   // useEffect(()=>{
    setDatas(data)
- 
+ useEffect(()=>{
+ if (location.pathname=='/') {
+  location.pathname='/bugun'
+ }
+ },[location.pathname])
   return (
     <>
      <main >

@@ -3,7 +3,7 @@ import { NavLink, useLocation, useNavigate } from "react-router-dom"
 
 export const ChoseBtns=({url,setUrl})=>{
     const location =useLocation()
-    console.log(location);
+ 
     useEffect(()=>{
         switch (location.pathname) {
             case '/bugun':
