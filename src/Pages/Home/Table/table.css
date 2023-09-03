@@ -1,0 +1,27 @@
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+table .table-td{
+    /* border:none; */
+    width: 200px;
+}
+table .table-td tr{
+    display: inline-block;
+    /* border:none; */
+    width: 100%;
+    /* background-color: red; */
+}
+table .table-td td{
+    /* border:none; */
+    width: 200px;
+}
+table,th,td,tr{
+    border: 1px slid #000;
+    border-left:none  ;
+    border-right: none;
+    border-bottom: 1px solid red;
+    border-top:none ;
+    border-collapse:collapse;
+}

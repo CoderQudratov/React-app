@@ -1,0 +1,45 @@
+.site-header{
+    background-color: var(--site-header);
+}
+.container{
+    max-width: 1350px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;    
+}
+.site-header__wrapper{
+    /* padding: 10px 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-logo{
+    font-size: 32px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Quicksand';
+    font-weight: 700;
+    color: var(--site-color);
+}
+.site-header__list{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-header__lang{
+    font-size: 22px;
+    text-transform: capitalize;
+    color: var(--site-main);
+    font-family: 'Quicksand';
+    font-weight: 600;
+}
+
+.select-city{
+    font-family: 'Quicksand';
+    font-weight: normal;
+    width: 200px;
+}
+.active{
+    color: var(--site-color);
+}
